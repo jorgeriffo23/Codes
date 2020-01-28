@@ -18,21 +18,22 @@ public class ejercicio11 {
 			num[i]=sc.nextInt();
 			
 			while(j<10) {
-				if (num[i]>=num[j]) {
-					 while((c)>=0) {
-					    	
-					    	if(c>(j-1)) {
-					    		num2[c]=num[c-j];
-					     }
-					    	else if(c<=(j-1)) {
-					    		num2[c]=num[9-(j-c-1)];
-					    	}
-					    	c--;
-					    }	
+				if(num[i]>=num2[j]) {
 					
+					 while(c>j) {
+					    	num2[c]=num[c-1];
+					    	c--;
+					    }
+					 num2[j]=num[i];
+					
+				}
+				else {
+					num2[j]=num[i];
 				}
 				c=9;
 				j++;
+			
+				
 			}
 			j=0;
 			i++;
